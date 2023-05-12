@@ -37,9 +37,9 @@ class LinkedList:
         while itr:
             random_data = 'None' if itr.random is None else str(itr.random.data)
             if itr.next is None:
-                print(str(itr.data) + '('+ random_data +')')
+                print(f'{str(itr.data)}({random_data})')
             else:
-                print(str(itr.data) + '('+ random_data +') -->', end=' ')
+                print(f'{str(itr.data)}({random_data}) -->', end=' ')
             itr = itr.next
 
     def clone(self):
@@ -82,11 +82,10 @@ class LinkedList:
             if itr1.data != itr2.data:
                 return False
             if (itr1.random and not itr2.random) or \
-            (itr2.random and not itr1.random):
+                (itr2.random and not itr1.random):
                 return False
-            if itr1.random and itr2.random:
-                if itr1.random.data != itr2.random.data:
-                    return False
+            if itr1.random and itr1.random.data != itr2.random.data:
+                return False
             itr1 = itr1.next
             itr2 = itr2.next
 

@@ -26,7 +26,7 @@ class LinkedList:
             if itr.next is None:
                 print(itr.data)
             else:
-                print(str(itr.data), '-->', end=' ')
+                print(itr.data, '-->', end=' ')
             itr = itr.next
 
     def _reverse_recur(self, node):

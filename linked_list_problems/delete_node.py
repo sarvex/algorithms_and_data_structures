@@ -28,7 +28,7 @@ class LinkedList:
             if itr.next is None:
                 print(itr.data)
             else:
-                print(str(itr.data)+ "-->", end=" ")
+                print(f"{str(itr.data)}-->", end=" ")
             itr = itr.next
 
     def delete_node(self, node):

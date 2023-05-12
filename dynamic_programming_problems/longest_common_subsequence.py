@@ -12,7 +12,7 @@ def lcs(str1, str2):
     m = len(str1)
     n = len(str2)
 
-    dp = [[None] * (n+1) for i in range(m+1)]
+    dp = [[None] * (n+1) for _ in range(m+1)]
 
     for i in range(m+1):
         for j in range(n+1):

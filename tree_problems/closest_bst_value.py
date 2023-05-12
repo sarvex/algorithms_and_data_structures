@@ -25,7 +25,7 @@ def closest_diff_util(node, target, min_diff, min_diff_data):
     min_diff -- minimum difference between target and the nodes we have iterated so far
     min_diff_data -- the value of node which is closest to target so far.
     '''
-    if node == None:
+    if node is None:
         return
 
     # If the target itself is present in the tree.

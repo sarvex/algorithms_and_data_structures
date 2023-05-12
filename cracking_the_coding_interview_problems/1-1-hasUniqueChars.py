@@ -33,11 +33,7 @@ def is_unique2(string):
     check = [0 for _ in range(8)]
     for char in string:
         v = ord(char)
-        # find int bucket which will represent this char
-        idx = int(v / 32)
-        # find the bit in this int bucket which will represent this char
-        shift = v % 32
-
+        idx, shift = divmod(v, 32)
         if check[idx] & (1 << shift):
             return False
         check[idx] |= (1 << shift)

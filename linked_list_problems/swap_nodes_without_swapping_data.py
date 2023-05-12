@@ -29,7 +29,7 @@ class LinkedList:
             if itr.next is None:
                 print(itr.data)
             else:
-                print(str(itr.data) + '-->', end = ' ')
+                print(f'{str(itr.data)}-->', end = ' ')
             itr = itr.next
 
     def print_list_addr(self):
@@ -37,9 +37,9 @@ class LinkedList:
         itr = self.head
         while itr:
             if itr.next is None:
-                print(str(itr.data) + '(' + str(hex(id(itr))) + ')')
+                print(f'{str(itr.data)}({hex(id(itr))})')
             else:
-                print(str(itr.data) + '(' + str(hex(id(itr))) + ') --> ', end=' ')
+                print(f'{str(itr.data)}({hex(id(itr))}) --> ', end=' ')
             itr = itr.next
 
     def swap_nodes_without_swapping_data(self, x, y):

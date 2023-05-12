@@ -34,10 +34,9 @@ class Tree:
         """Utility function for recursive calculation of the height of the tree"""
         if not node:
             return 0
-        else:
-            lheight = self.height_util(node.left)
-            rheight = self.height_util(node.right)
-            return lheight+1 if lheight > rheight else rheight + 1
+        lheight = self.height_util(node.left)
+        rheight = self.height_util(node.right)
+        return lheight+1 if lheight > rheight else rheight + 1
     
     def height(self):
         """Height of the tree"""

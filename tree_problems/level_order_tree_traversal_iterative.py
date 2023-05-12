@@ -33,8 +33,7 @@ class Tree:
     def level_order(self):
         """Prints level order tree traversal iterative way"""
         #an empty queue
-        queue = []
-        queue.append(self.root)
+        queue = [self.root]
         while queue:
             curr = queue.pop(0)
             print(curr.data, end=' ')
@@ -42,7 +41,7 @@ class Tree:
                 queue.append(curr.left)
             if curr.right:
                 queue.append(curr.right)
-        
+
         print()
 
 

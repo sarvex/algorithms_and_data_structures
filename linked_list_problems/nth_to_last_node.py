@@ -43,7 +43,7 @@ def print_list(head):
         if not head.next:
             print(head.data)
         else:
-            print(str(head.data) + " --> ", end = " ")
+            print(f"{str(head.data)} --> ", end = " ")
         head = head.next
 
 

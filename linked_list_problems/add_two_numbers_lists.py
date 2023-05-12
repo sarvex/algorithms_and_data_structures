@@ -57,7 +57,7 @@ def print_list(head):
         if head.next is None:
             print(head.data)
         else:
-            print(str(head.data)+ '-->', end = ' ')
+            print(f'{str(head.data)}-->', end = ' ')
         head = head.next
 
 
